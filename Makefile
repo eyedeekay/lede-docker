@@ -21,7 +21,7 @@ docker-kernel_config:
 	docker stop lede-kernel-config
 
 run:
-	docker run -i --rm --name lede-build -t lede-build make
+	docker run -i -d --name lede-build -t lede-build
 
 copy-config:
 	docker cp lede-build:/home/lede-build/source/.config .
