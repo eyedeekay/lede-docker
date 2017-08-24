@@ -9,6 +9,9 @@ docker-parent-build:
 docker-build:
 	docker build -f Dockerfile.build -t lede-build .
 
+docker-test:
+	docker build -f Dockerfile.build -t lede-test .
+
 run:
 	docker run -i --rm --name lede-build -t lede-build bash
 

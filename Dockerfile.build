@@ -1,5 +1,7 @@
 FROM lede-docker
 RUN make defconfig
+COPY files/ /home/lede-build/source/files
+RUN ls -la /home/lede-build/source/files
 RUN make
 #RUN make kernel_defconfig
 #CMD [ "make", "nconfig" ]
