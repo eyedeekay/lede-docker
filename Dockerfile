@@ -16,5 +16,8 @@ RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         libboost1.55-dev libxml-parser-perl libusb-dev bin86 bcc sharutils \
         openjdk-7-jdk
 RUN chown -R lede-build:lede-build /home/lede-build/
+USER lede-build
 WORKDIR /home/lede-build/source
 RUN ./scripts/feeds update -a
+RUN ./scripts/feeds install -a
+

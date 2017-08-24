@@ -1,0 +1,5 @@
+FROM lede-docker
+RUN make defconfig
+RUN make
+#RUN make kernel_defconfig
+#CMD [ "make", "nconfig" ]
