@@ -20,4 +20,12 @@ USER lede-build
 WORKDIR /home/lede-build/source
 RUN ./scripts/feeds update -a
 RUN ./scripts/feeds install -a
-
+COPY files/ /home/lede-build/source/files
+USER root
+RUN chown -R lede-build:lede-build /home/lede-build/source/files
+USER lede-build
+RUN git clone https://github.com/mwarning/KadNode.git
+RUN cp -rf KadNode/lede/kadnode package/
+RUN rm -rf KadNode/
+RUN ls -la /home/lede-build/source/files
+RUN make defconfig

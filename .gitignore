@@ -1,3 +1,4 @@
 *.tar
 files
 files/*
+bin

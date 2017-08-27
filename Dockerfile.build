@@ -1,8 +1,3 @@
 FROM lede-docker
-RUN make defconfig
-COPY files/ /home/lede-build/source/files
-USER root
-RUN chown -R lede-build:lede-build /home/lede-build/source/files
-USER lede-build
-RUN ls -la /home/lede-build/source/files
-CMD [ "make", "V=s", "&&", "bash" ]
+COPY .config /home/lede-build/source/.config
+CMD [ "make" ]
