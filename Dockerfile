@@ -5,9 +5,7 @@ RUN echo "Acquire::http::Proxy \"http://172.17.0.2:3142\";" | tee -a /etc/apt/ap
 RUN echo "Acquire::https::Proxy-Auto-Detect \"true\";" | tee -a /etc/apt/apt.conf.d/00proxy
 RUN echo "Acquire::http::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee /etc/apt/apt.conf.d/auto-apt-proxy.conf
 RUN adduser --home /home/lede-build/ --shell /bin/bash --disabled-password lede-build
-USER lede-build
 RUN git clone https://github.com/eyedeekay/lede-source /home/lede-build/source
-USER root
 RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         libncurses5-dev unzip gawk zlib1g-dev subversion mercurial bc binutils \
         bzip2 fastjar flex g++ gcc util-linux libgtk2.0-dev gettext unzip \
@@ -15,17 +13,14 @@ RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         patch perl-modules rsync ruby sdcc unzip wget gettext xsltproc \
         libboost1.55-dev libxml-parser-perl libusb-dev bin86 bcc sharutils \
         openjdk-7-jdk
-RUN chown -R lede-build:lede-build /home/lede-build/
-USER lede-build
-WORKDIR /home/lede-build/source
+
 RUN ./scripts/feeds update -a
 RUN ./scripts/feeds install -a
+
 COPY files/ /home/lede-build/source/files
-USER root
-RUN chown -R lede-build:lede-build /home/lede-build/source/files
+COPY kadnode /home/lede-build/source/packages/kadnode
+RUN chown -R lede-build:lede-build /home/lede-build/source/
+
 USER lede-build
-RUN git clone https://github.com/mwarning/KadNode.git
-RUN cp -rf KadNode/lede/kadnode package/
-RUN rm -rf KadNode/
-RUN ls -la /home/lede-build/source/files
+WORKDIR /home/lede-build/source
 RUN make defconfig
