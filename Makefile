@@ -1,14 +1,14 @@
 
 docker-all:
 	make docker-parent-build
+	make docker-build
 
 docker-parent-build:
-	docker build -t lede-docker .
+	docker build --force-rm -t lede-docker .
 
 docker-build:
 	docker rm -f lede-build; \
-	docker build -f Dockerfile.build -t lede-docker .
-	make run
+	docker build --force-rm -f Dockerfile.build -t lede-docker .
 
 docker-test:
 	docker build -f Dockerfile.build -t lede-test .
@@ -18,12 +18,17 @@ menuconfig:
 	docker cp lede-config:/home/lede-build/source/.config .
 	docker rm -f lede-config
 
+yesconfig:
+	docker run -i --name lede-allyes-config -t lede-docker make allyesconfig
+	docker cp lede-config:/home/lede-build/source/.config .allyesconfig
+	docker rm -f lede-allyes-config
+
 kernel_menuconfig:
 	docker run -i --name lede-kernel-config -t lede-docker make kernel_menuconfig
 	docker cp lede-kernel-config:/home/lede-build/source/.config .
 	docker rm -f lede-kernel-config
 
-run:
+build:
 	docker run -i --name lede-build -t lede-build
 
 copy-config:
