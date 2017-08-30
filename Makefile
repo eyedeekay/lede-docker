@@ -8,7 +8,7 @@ docker-parent-build:
 
 docker-build:
 	docker rm -f lede-build; \
-	docker build --force-rm -f Dockerfile.build -t lede-docker .
+	docker build --force-rm -f Dockerfile.build -t lede-build .
 
 docker-test:
 	docker build -f Dockerfile.build -t lede-test .
@@ -35,8 +35,17 @@ copy-config:
 	docker cp lede-config:/home/lede-build/source/.config .
 
 copy-bin:
+	rm -rf bin
 	docker cp lede-build:/home/lede-build/source/bin .
 
 untar:
 	rm -rf files && mkdir files
 	cd files && tar -xvf ../*.tar
+
+clobber:
+	docker rm -f lede-docker lede-build lede-config lede-test lede-kernel-config
+
+release:
+	@echo "don't use this yet."
+	#./release.sh
+
