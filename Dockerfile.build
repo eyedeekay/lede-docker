@@ -1,3 +1,4 @@
 FROM lede-docker
-COPY .config /home/lede-build/source/.config
+COPY .config.in /home/lede-build/source/.config
+#RUN make olddefconfig
 CMD [ "make", "V=s" ]

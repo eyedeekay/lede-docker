@@ -1,9 +1,13 @@
 
+new:
+	make docker-parent-build
+
 docker-all:
 	make docker-parent-build
 	make docker-build
 
 docker-parent-build:
+	docker rm -f lede-docker; \
 	docker build --force-rm -t lede-docker .
 
 docker-build:
@@ -15,7 +19,7 @@ docker-test:
 
 menuconfig:
 	docker run -i --name lede-config -t lede-docker make menuconfig
-	docker cp lede-config:/home/lede-build/source/.config .
+	docker cp lede-config:/home/lede-build/source/.config .config.in
 	docker rm -f lede-config
 
 yesconfig:
@@ -25,14 +29,20 @@ yesconfig:
 
 kernel_menuconfig:
 	docker run -i --name lede-kernel-config -t lede-docker make kernel_menuconfig
-	docker cp lede-kernel-config:/home/lede-build/source/.config .
+	docker cp lede-kernel-config:/home/lede-build/source/.config .config.k.in
 	docker rm -f lede-kernel-config
+
+savenv:
+	docker save lede-docker -o lede-docker.tar
+
+snapshot:
+	docker save lede-build -o lede-build.tar
 
 build:
 	docker run -i --name lede-build -t lede-build
 
 copy-config:
-	docker cp lede-config:/home/lede-build/source/.config .
+	docker cp lede-config:/home/lede-build/source/.config .config.in
 
 copy-bin:
 	rm -rf bin

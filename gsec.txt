@@ -1,0 +1,44 @@
+/home/idk/.gnupg/pubring.gpg
+----------------------------
+pub   rsa2048 2014-12-02 [SC]
+      72E3CB773315DFA2E464743D94532124541922FB
+uid           [ unknown] Devuan Repository (Primary Devuan signing key) <repository@devuan.org>
+sub   rsa2048 2014-12-02 [E]
+sub   rsa4096 2016-04-26 [S]
+
+pub   rsa4096 2017-05-22 [SC] [expires: 2025-05-20]
+      6ED6F5CB5FA6FB2F460AE88EEDA0D2388AE22BA9
+uid           [ unknown] Debian Security Archive Automatic Signing Key (9/stretch) <ftpmaster@debian.org>
+sub   rsa4096 2017-05-22 [S] [expires: 2025-05-20]
+
+pub   rsa2048 2017-07-11 [SC] [expires: 2019-07-11]
+      70D2060738BEF80523ACAFF7D75C03B39B5E14E1
+uid           [ unknown] eyedeekay <problemsolver@openmailbox.org>
+sub   rsa2048 2017-07-11 [E] [expires: 2019-07-11]
+
+pub   rsa4096 2014-11-21 [SC] [expires: 2022-11-19]
+      126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+uid           [ unknown] Debian Archive Automatic Signing Key (8/jessie) <ftpmaster@debian.org>
+
+pub   rsa4096 2016-12-14 [SC]
+      951928BB317024EFD053D73C66F6C87B98EBCFE2
+uid           [ unknown] R4SAS (r4sas) <r4sas@i2pmail.org>
+sub   rsa4096 2016-12-14 [E]
+
+pub   rsa2048 2009-09-04 [SC] [expires: 2020-08-29]
+      A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+uid           [ unknown] deb.torproject.org archive signing key
+sub   rsa2048 2009-09-04 [S] [expires: 2018-08-30]
+
+pub   rsa4096 2017-05-20 [SC] [expires: 2025-05-18]
+      067E3C456BAE240ACEE88F6FEF0F382A1A7B6500
+uid           [ unknown] Debian Stable Release Key (9/stretch) <debian-release@lists.debian.org>
+
+pub   rsa4096 2015-10-17 [C] [expires: 2018-10-16]
+      E3317DB04D3958FD5F662C37B8E4105CC9DEDC77
+uid           [ unknown] Google Security Team <security@google.com>
+sub   nistp384 2015-10-17 [S] [expires: 2018-10-16]
+sub   nistp384 2015-10-17 [E] [expires: 2018-10-16]
+sub   rsa4096 2015-10-17 [S] [expires: 2018-10-16]
+sub   rsa4096 2015-10-17 [E] [expires: 2018-10-16]
+
