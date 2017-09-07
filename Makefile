@@ -5,6 +5,7 @@ new:
 docker-all:
 	make docker-parent-build
 	make docker-build
+	make build
 
 docker-parent-build:
 	docker rm -f lede-docker; \
@@ -28,6 +29,13 @@ editconfig:
 	docker exec -i -t lede-config make menuconfig
 	docker cp lede-config:/home/lede-build/source/.config .config.in
 	docker rm -f lede-config
+
+diffconfig:
+	docker run --name lede-config -t lede-build ./scripts/diffconfig.sh > config.diff.in
+
+kadnode:
+	docker run -i --name lede-kadnode -t lede-docker make package/kadnode/compile V=s
+	docker cp lede-kadnode:/home/lede-build/source/
 
 yesconfig:
 	docker run -i --name lede-allyes-config -t lede-docker make allyesconfig
