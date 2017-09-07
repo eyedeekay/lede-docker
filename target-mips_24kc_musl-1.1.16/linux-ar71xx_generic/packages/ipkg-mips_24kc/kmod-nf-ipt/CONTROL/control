@@ -1,0 +1,9 @@
+Package: kmod-nf-ipt
+Version: 4.4.71-1
+Depends: kernel (=4.4.71-1-6bbb9128e93c82acb4f7dcdd971bdbb3)
+Source: package/kernel/linux
+License: GPLv2
+Section: kernel
+Architecture: mips_24kc
+Installed-Size: 16006
+Description:  Iptables core

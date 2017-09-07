@@ -22,6 +22,13 @@ menuconfig:
 	docker cp lede-config:/home/lede-build/source/.config .config.in
 	docker rm -f lede-config
 
+editconfig:
+	docker run -d --name lede-config -t lede-docker make menuconfig
+	docker cp .config.in lede-config:/home/lede-build/source/.config
+	docker exec -i -t lede-config make menuconfig
+	docker cp lede-config:/home/lede-build/source/.config .config.in
+	docker rm -f lede-config
+
 yesconfig:
 	docker run -i --name lede-allyes-config -t lede-docker make allyesconfig
 	docker cp lede-config:/home/lede-build/source/.config .allyesconfig
@@ -35,8 +42,13 @@ kernel_menuconfig:
 savenv:
 	docker save lede-docker -o lede-docker.tar
 
+
 snapshot:
 	docker save lede-build -o lede-build.tar
+
+split:
+	split -b 99M lede-docker.tar
+	split -b 99M lede-build.tar
 
 build:
 	docker run -i --name lede-build -t lede-build

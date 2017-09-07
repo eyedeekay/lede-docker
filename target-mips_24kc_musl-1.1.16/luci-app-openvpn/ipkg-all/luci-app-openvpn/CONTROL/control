@@ -1,0 +1,8 @@
+Package: luci-app-openvpn
+Version: git-17.152.82987-7f6fc16-1
+Depends: libc
+Source: feeds/luci/applications/luci-app-openvpn
+Section: luci
+Architecture: all
+Installed-Size: 8863
+Description:  LuCI Support for OpenVPN

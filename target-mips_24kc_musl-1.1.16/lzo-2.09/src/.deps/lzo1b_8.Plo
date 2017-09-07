@@ -1,0 +1,88 @@
+src/lzo1b_8.lo: src/lzo1b_8.c \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/stdc-predef.h \
+ src/compr1b.h src/config1b.h src/lzo_conf.h include/lzo/lzoconf.h \
+ config.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/limits.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/features.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/glibc-types.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/cdefs.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/bits/limits.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/stddef.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/bits/alltypes.h \
+ include/lzo/lzodefs.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/string.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/string.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/strings.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/strings.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/fortify-headers.h \
+ src/lzo_supp.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/assert.h \
+ src/lzo_func.h src/lzo_ptr.h include/lzo/lzo1b.h src/lzo1b_de.h \
+ src/lzo_dict.h src/stats1b.h src/lzo1b_cc.h src/lzo1b_c.ch \
+ src/lzo1b_sm.ch src/lzo1b_tm.ch src/lzo1b_cr.ch src/lzo1b_cm.ch
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/stdc-predef.h:
+
+src/compr1b.h:
+
+src/config1b.h:
+
+src/lzo_conf.h:
+
+include/lzo/lzoconf.h:
+
+config.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/limits.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/features.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/glibc-types.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/cdefs.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/bits/limits.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/stddef.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/bits/alltypes.h:
+
+include/lzo/lzodefs.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/string.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/string.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/strings.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/strings.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/fortify-headers.h:
+
+src/lzo_supp.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/assert.h:
+
+src/lzo_func.h:
+
+src/lzo_ptr.h:
+
+include/lzo/lzo1b.h:
+
+src/lzo1b_de.h:
+
+src/lzo_dict.h:
+
+src/stats1b.h:
+
+src/lzo1b_cc.h:
+
+src/lzo1b_c.ch:
+
+src/lzo1b_sm.ch:
+
+src/lzo1b_tm.ch:
+
+src/lzo1b_cr.ch:
+
+src/lzo1b_cm.ch:

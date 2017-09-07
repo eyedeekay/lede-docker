@@ -1,0 +1,8 @@
+Package: luci-theme-bootstrap
+Version: git-17.152.82987-7f6fc16-1
+Depends: libc
+Source: feeds/luci/themes/luci-theme-bootstrap
+Section: luci
+Architecture: all
+Installed-Size: 13086
+Description:  Bootstrap Theme (default)

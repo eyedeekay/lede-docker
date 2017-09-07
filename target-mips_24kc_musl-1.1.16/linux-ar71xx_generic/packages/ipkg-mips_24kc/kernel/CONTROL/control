@@ -1,0 +1,9 @@
+Package: kernel
+Version: 4.4.71-1-6bbb9128e93c82acb4f7dcdd971bdbb3
+Depends: libc
+Source: package/kernel/linux
+License: GPLv2
+Section: sys
+Architecture: mips_24kc
+Installed-Size: 104
+Description:  Virtual kernel package

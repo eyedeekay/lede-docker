@@ -1,0 +1,70 @@
+libuuid/src/libuuid_la-pack.lo: libuuid/src/pack.c \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/stdc-predef.h \
+ config.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/string.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/string.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/features.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/glibc-types.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/cdefs.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/bits/alltypes.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/strings.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/strings.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/fortify-headers.h \
+ libuuid/src/uuidP.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/inttypes.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/stdint.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/bits/stdint.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/types.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/endian.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/sys/select.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/select.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/sysmacros.h \
+ libuuid/src/uuid.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/time.h \
+ /home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/time.h
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/stdc-predef.h:
+
+config.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/string.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/string.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/features.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/glibc-types.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/cdefs.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/bits/alltypes.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/strings.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/strings.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/fortify-headers.h:
+
+libuuid/src/uuidP.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/inttypes.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/stdint.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/bits/stdint.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/types.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/endian.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/fortify/sys/select.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/select.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/sysmacros.h:
+
+libuuid/src/uuid.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/sys/time.h:
+
+/home/lede-build/source/staging_dir/toolchain-mips_24kc_gcc-5.4.0_musl-1.1.16/include/time.h:

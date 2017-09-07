@@ -1,0 +1,9 @@
+/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/uhttpd-2016-10-25-1628fa4b/CMakeFiles/install.dir
+/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/uhttpd-2016-10-25-1628fa4b/CMakeFiles/list_install_components.dir
+/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/uhttpd-2016-10-25-1628fa4b/CMakeFiles/rebuild_cache.dir
+/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/uhttpd-2016-10-25-1628fa4b/CMakeFiles/edit_cache.dir
+/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/uhttpd-2016-10-25-1628fa4b/CMakeFiles/install/strip.dir
+/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/uhttpd-2016-10-25-1628fa4b/CMakeFiles/install/local.dir
+/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/uhttpd-2016-10-25-1628fa4b/CMakeFiles/uhttpd_lua.dir
+/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/uhttpd-2016-10-25-1628fa4b/CMakeFiles/uhttpd_ubus.dir
+/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/uhttpd-2016-10-25-1628fa4b/CMakeFiles/uhttpd.dir
