@@ -24,9 +24,7 @@ menuconfig:
 	docker rm -f lede-config
 
 editconfig:
-	docker run -d --name lede-config -t lede-docker make menuconfig
-	docker cp .config.in lede-config:/home/lede-build/source/.config
-	docker exec -i -t lede-config make menuconfig
+	docker run -i --name lede-config -t lede-build make menuconfig
 	docker cp lede-config:/home/lede-build/source/.config .config.in
 	docker rm -f lede-config
 
@@ -34,8 +32,9 @@ diffconfig:
 	docker run --name lede-config -t lede-build ./scripts/diffconfig.sh > config.diff.in
 
 kadnode:
+	docker rm -f lede-kadnode; \
 	docker run -i --name lede-kadnode -t lede-docker make package/kadnode/compile V=s
-	docker cp lede-kadnode:/home/lede-build/source/
+	#docker cp lede-kadnode:/home/lede-build/source/package/kadnode
 
 yesconfig:
 	docker run -i --name lede-allyes-config -t lede-docker make allyesconfig
@@ -49,7 +48,6 @@ kernel_menuconfig:
 
 savenv:
 	docker save lede-docker -o lede-docker.tar
-
 
 snapshot:
 	docker save lede-build -o lede-build.tar
