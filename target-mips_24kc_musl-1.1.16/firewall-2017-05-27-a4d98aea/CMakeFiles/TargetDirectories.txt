@@ -1,7 +1,0 @@
-/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/firewall-2017-05-27-a4d98aea/CMakeFiles/install/strip.dir
-/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/firewall-2017-05-27-a4d98aea/CMakeFiles/install/local.dir
-/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/firewall-2017-05-27-a4d98aea/CMakeFiles/install.dir
-/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/firewall-2017-05-27-a4d98aea/CMakeFiles/list_install_components.dir
-/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/firewall-2017-05-27-a4d98aea/CMakeFiles/edit_cache.dir
-/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/firewall-2017-05-27-a4d98aea/CMakeFiles/rebuild_cache.dir
-/home/lede-build/source/build_dir/target-mips_24kc_musl-1.1.16/firewall-2017-05-27-a4d98aea/CMakeFiles/firewall3.dir

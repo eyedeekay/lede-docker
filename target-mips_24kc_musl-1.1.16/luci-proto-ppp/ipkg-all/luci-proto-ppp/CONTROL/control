@@ -1,8 +1,0 @@
-Package: luci-proto-ppp
-Version: git-17.152.82987-7f6fc16-1
-Depends: libc
-Source: feeds/luci/protocols/luci-proto-ppp
-Section: luci
-Architecture: all
-Installed-Size: 3086
-Description:  Support for PPP/PPPoE/PPPoA/PPtP
