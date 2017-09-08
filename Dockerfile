@@ -20,7 +20,9 @@ WORKDIR /home/lede-build/source
 
 RUN chown --preserve-root -RL lede-build:lede-build /home/lede-build/source
 
-RUN chown --preserve-root -RL root:root /home/lede-build/source/scripts
+RUN chown --preserve-root -RL root:root /home/lede-build/source/scripts/*
+
+RUN chown --preserve-root lede-build:lede-build /home/lede-build/source
 
 RUN ./scripts/feeds update -a
 RUN ./scripts/feeds install -a
