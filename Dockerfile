@@ -5,6 +5,7 @@ RUN echo "Acquire::http::Proxy \"http://172.17.0.2:3142\";" | tee -a /etc/apt/ap
 RUN echo "Acquire::https::Proxy-Auto-Detect \"true\";" | tee -a /etc/apt/apt.conf.d/00proxy
 RUN echo "Acquire::http::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee /etc/apt/apt.conf.d/auto-apt-proxy.conf
 RUN adduser --home /home/lede-build/ --shell /bin/bash --disabled-password lede-build
+RUN addgroup lede-build grsec-tpe; true
 RUN wget -O /home/lede-build/v17.01.2.tar.gz https://github.com/lede-project/source/archive/v17.01.2.tar.gz
 RUN cd /home/lede-build && tar -xvzf v17.01.2.tar.gz
 RUN mv /home/lede-build/source-17.01.2 /home/lede-build/source
@@ -20,9 +21,9 @@ WORKDIR /home/lede-build/source
 
 RUN chown --preserve-root -RL lede-build:lede-build /home/lede-build/source
 
-RUN chown --preserve-root -RL root:root /home/lede-build/source/scripts/*
+#RUN chown --preserve-root -RL root:root /home/lede-build/source/scripts/*
 
-RUN chown --preserve-root lede-build:lede-build /home/lede-build/source /home/lede-build/source/*
+#RUN chown --preserve-root lede-build:lede-build /home/lede-build/source /home/lede-build/source/*
 
 RUN ./scripts/feeds update -a
 RUN ./scripts/feeds install -a
