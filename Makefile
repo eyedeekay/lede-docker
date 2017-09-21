@@ -5,7 +5,6 @@ new:
 docker-all:
 	make docker-parent-build
 	make docker-build
-	make build
 
 docker-parent-build:
 	docker rm -f lede-docker; \
@@ -60,7 +59,7 @@ build:
 	docker run -i --name lede-build -t lede-build
 
 copy-config:
-	docker cp lede-config:/home/lede-build/source/.config .config.in
+	docker cp lede-build:/home/lede-build/source/.config .config.in
 
 copy-bin:
 	rm -rf bin

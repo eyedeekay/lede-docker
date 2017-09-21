@@ -4,8 +4,9 @@ RUN apt-get install -yq apt-transport-https apt-utils iproute bash git-core wget
 RUN echo "Acquire::http::Proxy \"http://172.17.0.2:3142\";" | tee -a /etc/apt/apt.conf.d/00proxy
 RUN echo "Acquire::https::Proxy-Auto-Detect \"true\";" | tee -a /etc/apt/apt.conf.d/00proxy
 RUN echo "Acquire::http::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee /etc/apt/apt.conf.d/auto-apt-proxy.conf
+RUN groupadd -r -g 64040 grsec-tpe;
 RUN adduser --home /home/lede-build/ --shell /bin/bash --disabled-password lede-build
-RUN groupadd -r -g 64040 grsec-tpe; usermod -aG grsec-tpe lede-build; true
+RUN usermod -aG grsec-tpe lede-build; true
 RUN wget -O /home/lede-build/v17.01.2.tar.gz https://github.com/lede-project/source/archive/v17.01.2.tar.gz
 RUN cd /home/lede-build && tar -xvzf v17.01.2.tar.gz
 RUN mv /home/lede-build/source-17.01.2 /home/lede-build/source
