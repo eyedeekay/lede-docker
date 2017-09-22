@@ -56,7 +56,7 @@ split:
 	split -b 99M lede-build.tar
 
 build:
-	docker run -i --name lede-build -t lede-build
+	docker run -i --name --privileged true lede-build -t lede-build
 	make copy-bin
 
 copy-config:

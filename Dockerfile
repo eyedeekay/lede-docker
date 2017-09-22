@@ -7,11 +7,11 @@ RUN echo "Acquire::http::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee /
 RUN groupadd -r -g 64040 grsec-tpe;
 RUN adduser --home /home/lede-build/ --shell /bin/bash --disabled-password lede-build
 RUN usermod -aG grsec-tpe lede-build; true
-#RUN wget -O /home/lede-build/v17.01.2.tar.gz https://github.com/lede-project/source/archive/v17.01.2.tar.gz
+RUN wget -O /home/lede-build/v17.01.2.tar.gz https://github.com/lede-project/source/archive/v17.01.2.tar.gz
+RUN cd /home/lede-build && tar -xvzf v17.01.2.tar.gz
+RUN mv /home/lede-build/source-17.01.2 /home/lede-build/source
 #RUN wget -O /home/lede-build/v17.01.2.zip https://github.com/lede-project/source/archive/master.zip
-#RUN cd /home/lede-build && tar -xvzf v17.01.2.tar.gz
 #RUN cd /home/lede-build && unzip v17.01.2.zip -d /home/lede-build/source-17.01.2
-#RUN mv /home/lede-build/source-17.01.2 /home/lede-build/source
 #RUN mv /home/lede-build/source-17.01.2/source-master /home/lede-build/source
 RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         libncurses5-dev unzip gawk zlib1g-dev subversion mercurial bc binutils \
@@ -20,7 +20,7 @@ RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         patch perl-modules rsync ruby sdcc unzip wget gettext xsltproc \
         libboost1.55-dev libxml-parser-perl libusb-dev bin86 bcc sharutils \
         openjdk-7-jdk curl git
-RUN git clone https://github.com/lede-project/source /home/lede-build/source
+#RUN git clone https://github.com/lede-project/source /home/lede-build/source
 
 WORKDIR /home/lede-build/source
 
