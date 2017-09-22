@@ -31,6 +31,8 @@ COPY kadnode/ /home/lede-build/source/package/kadnode
 
 COPY .config.in /home/lede-build/source/.config
 
+RUN make V=s defconfig
+
 RUN chown --preserve-root -RL lede-build:lede-build /home/lede-build/source
 
 USER lede-build
