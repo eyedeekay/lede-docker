@@ -16,7 +16,7 @@ RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         zlib1g-dev file python libncurses5-dev intltool jikespg genisoimage \
         patch perl-modules rsync ruby sdcc unzip wget gettext xsltproc \
         libboost1.55-dev libxml-parser-perl libusb-dev bin86 bcc sharutils \
-        openjdk-7-jdk
+        openjdk-7-jdk curl
 
 WORKDIR /home/lede-build/source
 
