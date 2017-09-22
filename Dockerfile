@@ -11,6 +11,7 @@ RUN usermod -aG grsec-tpe lede-build; true
 RUN wget -O /home/lede-build/v17.01.2.zip https://github.com/lede-project/source/archive/master.zip
 #RUN cd /home/lede-build && tar -xvzf v17.01.2.tar.gz
 RUN cd /home/lede-build && unzip v17.01.2.zip -d /home/lede-build/source-17.01.2
+#RUN mv /home/lede-build/source-17.01.2 /home/lede-build/source
 RUN mv /home/lede-build/source-17.01.2/source-master /home/lede-build/source
 RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         libncurses5-dev unzip gawk zlib1g-dev subversion mercurial bc binutils \
@@ -22,12 +23,11 @@ RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
 
 WORKDIR /home/lede-build/source
 
-RUN ls
-RUN ./scripts/feeds update -a
-RUN ./scripts/feeds install -a
-
 COPY files/ /home/lede-build/source/files
 COPY kadnode/ /home/lede-build/source/package/kadnode
+
+RUN ./scripts/feeds update -a
+RUN ./scripts/feeds install -a
 
 RUN chown --preserve-root -RL lede-build:lede-build /home/lede-build/source
 
