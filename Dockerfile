@@ -1,6 +1,6 @@
 FROM debian:jessie-backports
 RUN apt-get update && apt-get -yq dist-upgrade
-RUN apt-get install -yq apt-transport-https apt-utils iproute bash git-core wget auto-apt-proxy uzip
+RUN apt-get install -yq apt-transport-https apt-utils iproute bash git-core wget auto-apt-proxy unzip
 RUN echo "Acquire::http::Proxy \"http://172.17.0.2:3142\";" | tee -a /etc/apt/apt.conf.d/00proxy
 RUN echo "Acquire::https::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee -a /etc/apt/apt.conf.d/00proxy
 RUN echo "Acquire::http::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee /etc/apt/apt.conf.d/auto-apt-proxy.conf
