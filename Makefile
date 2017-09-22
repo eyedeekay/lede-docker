@@ -71,7 +71,8 @@ untar:
 	cd files && tar -xvf ../*.tar
 
 clobber:
-	docker rm -f lede-docker lede-build lede-config lede-test lede-kernel-config
+	docker rm -f lede-docker lede-build lede-config lede-test lede-kernel-config; \
+	docker rmi -f lede-docker lede-build lede-config lede-test lede-kernel-config
 
 release:
 	@echo "don't use this yet."
