@@ -22,7 +22,7 @@ RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
 
 WORKDIR /home/lede-build/source
 
-
+RUN ls
 RUN ./scripts/feeds update -a
 RUN ./scripts/feeds install -a
 
