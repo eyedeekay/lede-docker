@@ -29,6 +29,8 @@ COPY kadnode/ /home/lede-build/source/package/kadnode
 RUN ./scripts/feeds update -a
 RUN ./scripts/feeds install -a
 
+COPY .config.in /home/lede-build/source/.config
+
 RUN chown --preserve-root -RL lede-build:lede-build /home/lede-build/source
 
 USER lede-build
