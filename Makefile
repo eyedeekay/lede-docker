@@ -57,6 +57,7 @@ split:
 
 build:
 	docker run -i --name lede-build -t lede-build
+	make copy-bin
 
 copy-config:
 	docker cp lede-build:/home/lede-build/source/.config .config.in
