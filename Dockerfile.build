@@ -3,7 +3,5 @@ COPY .config.in /home/lede-build/source/.config
 USER root
 RUN chown lede-build:lede-build /home/lede-build/source/.config
 USER lede-build
-#RUN ./scripts/diffconfig.sh > diffconfig
-#RUN cp diffconfig .config
 RUN make defconfig
 CMD [ "make", "V=s" ]
