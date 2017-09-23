@@ -58,6 +58,11 @@ split:
 build:
 	docker run -i --privileged --name lede-build -t lede-build
 	make copy-bin
+	make archive
+
+archive:
+	rm -rf $(HOME)/Build/lede-$(shell date -d "yesterday" +%Y%m%d)*
+	cp -Rv bin $(HOME)/Build/lede-$(shell date +%Y%m%d%I)
 
 copy-config:
 	docker cp lede-build:/home/lede-build/source/.config .config.in
