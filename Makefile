@@ -61,8 +61,8 @@ build:
 	make archive
 
 archive:
-	rm -rf $(HOME)/Build/lede-$(shell date -d "yesterday" +%Y%m%d)*
-	cp -Rv bin $(HOME)/Build/lede-$(shell date +%Y%m%d%I)
+	rm -rf $(HOME)/Builds/lede-$(shell date -d "yesterday" +%Y%m%d)*
+	cp -Rv bin "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)"
 
 copy-config:
 	docker cp lede-build:/home/lede-build/source/.config .config.in
