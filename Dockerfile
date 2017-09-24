@@ -24,8 +24,8 @@ RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
 
 WORKDIR /home/lede-build/source
 
-RUN cp feeds.conf.default feeds.conf
-RUN echo src-git linkit https://github.com/MediaTek-Labs/linkit-smart-7688-feed.git | tee -a feeds.conf
+#RUN cp feeds.conf.default feeds.conf
+#RUN echo src-git linkit https://github.com/MediaTek-Labs/linkit-smart-7688-feed.git | tee -a feeds.conf
 
 RUN ./scripts/feeds update -a
 RUN ./scripts/feeds install -a
