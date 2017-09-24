@@ -8,7 +8,7 @@ docker-all:
 
 docker-parent-build:
 	docker rm -f lede-docker; \
-	docker build --force-rm -t lede-docker .
+	docker build --force-rm --build-arg "CACHING_PROXY=$(proxy_addr)" -t lede-docker .
 
 docker-build:
 	docker rm -f lede-build; \
