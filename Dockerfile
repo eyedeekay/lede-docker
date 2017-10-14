@@ -8,12 +8,11 @@ RUN echo "Acquire::http::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee /
 RUN groupadd -r -g 64040 grsec-tpe;
 RUN adduser --home /home/lede-build/ --shell /bin/bash --disabled-password lede-build
 RUN usermod -aG grsec-tpe lede-build; true
-RUN wget -O /home/lede-build/v17.01.2.tar.gz https://github.com/lede-project/source/archive/v17.01.2.tar.gz
-RUN cd /home/lede-build && tar -xvzf v17.01.2.tar.gz
-RUN mv /home/lede-build/source-17.01.2 /home/lede-build/source
-#RUN wget -O /home/lede-build/v17.01.2.zip https://github.com/lede-project/source/archive/master.zip
-#RUN cd /home/lede-build && unzip v17.01.2.zip -d /home/lede-build/source-17.01.2
-#RUN mv /home/lede-build/source-17.01.2/source-master /home/lede-build/source
+
+RUN wget -O /home/lede-build/v17.01.3.tar.gz https://github.com/lede-project/source/archive/v17.01.3.tar.gz
+RUN cd /home/lede-build && tar -xvzf v17.01.3.tar.gz
+RUN mv /home/lede-build/source-17.01.3 /home/lede-build/source
+
 RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         libncurses5-dev unzip gawk zlib1g-dev subversion mercurial bc binutils \
         bzip2 fastjar flex g++ gcc util-linux libgtk2.0-dev gettext unzip \
@@ -24,9 +23,6 @@ RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
 #RUN git clone https://github.com/lede-project/source /home/lede-build/source
 
 WORKDIR /home/lede-build/source
-
-#RUN cp feeds.conf.default feeds.conf
-#RUN echo src-git linkit https://github.com/MediaTek-Labs/linkit-smart-7688-feed.git | tee -a feeds.conf
 
 RUN ./scripts/feeds update -a
 RUN ./scripts/feeds install -a
