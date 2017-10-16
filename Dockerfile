@@ -2,9 +2,9 @@ FROM debian:jessie-backports
 ARG CACHING_PROXY="http://172.17.0.2:3142/"
 RUN apt-get update && apt-get -yq dist-upgrade
 RUN apt-get install -yq apt-transport-https apt-utils iproute bash git-core wget auto-apt-proxy unzip
-RUN echo "Acquire::http::Proxy \"$CACHING_PROXY\";" | tee -a /etc/apt/apt.conf.d/00proxy
-RUN echo "Acquire::https::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee -a /etc/apt/apt.conf.d/00proxy
-RUN echo "Acquire::http::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee /etc/apt/apt.conf.d/auto-apt-proxy.conf
+#RUN echo "Acquire::http::Proxy \"$CACHING_PROXY\";" | tee -a /etc/apt/apt.conf.d/00proxy
+#RUN echo "Acquire::https::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee -a /etc/apt/apt.conf.d/00proxy
+#RUN echo "Acquire::http::Proxy-Auto-Detect \"/usr/bin/auto-apt-proxy\";" | tee /etc/apt/apt.conf.d/auto-apt-proxy.conf
 RUN groupadd -r -g 64040 grsec-tpe;
 RUN adduser --home /home/lede-build/ --shell /bin/bash --disabled-password lede-build
 RUN usermod -aG grsec-tpe lede-build; true
