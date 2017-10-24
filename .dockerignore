@@ -1,3 +1,5 @@
 *.tar
 bin/*
+Pages/
+Images/
 .git
