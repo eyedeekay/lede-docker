@@ -64,9 +64,6 @@ build:
 	make archive
 
 old-build:
-	docker build --force-rm -f Dockerfile.omega2 -t lede-build .
-	docker build --force-rm -f Dockerfile.mtseeed -t lede-build .
-	docker build --force-rm -f Dockerfile.wndr3800 -t lede-build .
 	docker run -i --privileged --name lede-build -t lede-build
 	make copy-bin
 	make archive
