@@ -1,12 +1,39 @@
 # The Plan:
 
+Butchering the vocabulary in order to accomodate my thoughts for now. Subject
+to intense change until I lose interest on Thursday, probably.
+
 ## Build a local meshnet with useful services that do not require the internet.
+
+  1. Build my personal home/lab net out to cover the entire span of my
+   neighborhood.
+  2. Transparently connect to residential PC's using the same URL/Domain
+   everywhere. Preferably human-readable and doing authentication at another
+   layer.
+  3. Allow others to use my infrastructure to set up their own networks and
+   optionally make them available on the mesh.
+
+Why Today? Well, KRACK maybe was the immediate impetus. But more broadly, I want
+to put in place a policy for deploying services I wish to keep available to me
+on my network, and a procedure for updating and or rebooting the network.
+
+
+## Guides:
+
+  * Building using this repository: Coming Soon
+  * [Travel Router Assembly Gallery](https://github.com/eyedeekay/lede-docker/blob/master/Pages/ASSEMBLY_OMEGA2P.md): Images only so far
 
 ## Services:
 
-I
+### Services Goals:
 
-### Required for all routers except Repeaters and Spoofers:
+  * Transparent Global Addressability
+  * No dependence on Wireless crypto between devices for confidentiality
+  * Interconnectivity
+
+### Service Requirements:
+
+#### Required for all routers except Repeaters and Spoofers:
 
   * luci-ssl
   * openSSH Server(not Dropbear)
@@ -14,15 +41,15 @@ I
   * kadnode*
   * cjdns
 
-### Recommended for all routers except Repeaters and Spoofers:
+#### Recommended for all routers except Repeaters and Spoofers:
 
   * openVPN
   * p910nd
+  * squid
 
-## Guides:
+## Policies:
 
-  * Building using this repository: Coming Soon
-  * [Travel Router Assembly Gallery](https://github.com/eyedeekay/lede-docker/blob/master/Pages/ASSEMBLY_OMEGA2P.md): Images only so far
+### Policy Goals
 
 ### Informal Policy / Genesis of the Plan:
 
@@ -88,9 +115,6 @@ even more appealingly, the little guy is like 12 USD without the power adapter.
 And there's another company with an almost identical product called Seeed Studio
 which is about 14 USD retail, and it comes with power over usb built right in!
 And for a travel router, this thing has quite a bit of capability.
-
-### Policy Goals
-
 
 
 ## formerly my lede-docker Dockerfiles repository
