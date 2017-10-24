@@ -90,7 +90,7 @@ on anyone else's devices should they choose to participate in the meshnet.
   services. It also serves as a testing area for strategies and changes that
   will be migrated to the Home Router. In my lab, this is the role of the Onion
   Omega2.
-  4. + Mesh Routers/Mesh Servicers:
+  4. \+ Mesh Routers/Mesh Servicers:
    * Servicer: A servicer is a device which does at least 2 things: Host an
     outward-facing service and share it's wider network connection in any way.
     An example might be an old laptop running apt-cacher-ng, plugged into a Home
