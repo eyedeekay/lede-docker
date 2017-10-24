@@ -4,9 +4,11 @@
 
 ## Services:
 
+I
+
 ### Required for all routers except Repeaters and Spoofers:
 
-  * luci, luci-ssl
+  * luci-ssl
   * openSSH Server(not Dropbear)
   * tinc
   * kadnode*
@@ -20,7 +22,7 @@
 ## Guides:
 
   * Building using this repository: Coming Soon
-  * [Travel Router Assembly Gallery](): Images only so far
+  * [Travel Router Assembly Gallery](https://github.com/eyedeekay/lede-docker/blob/master/Pages/ASSEMBLY_OMEGA2P.md): Images only so far
 
 ### Informal Policy / Genesis of the Plan:
 
