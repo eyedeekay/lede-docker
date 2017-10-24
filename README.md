@@ -77,7 +77,7 @@ on anyone else's devices should they choose to participate in the meshnet.
   "Stable" which here means that it gets updates that are built only from
   official sources with isolated toolchains to avoid library interference, and
   only recieves customizations from selfhosted repositories, and not from
-  packages built into the firmware image. In my lab, this is a Netgear WNR3800.
+  packages built into the firmware image. In my lab, this is a Netgear wndr3800.
   2. Backup/Spoofer Router: This one is manually configured to have identical
   settings to Home Router in a known good configuration, so that it can take the
   place of Home Router if it's down for maintenance. It only runs a stock
