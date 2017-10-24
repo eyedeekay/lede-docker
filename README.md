@@ -6,7 +6,8 @@ to intense change until I lose interest on Thursday, probably.
 ## Build a local meshnet with useful services that do not require the internet.
 
   1. Build my personal home/lab net out to cover the entire span of my
-   neighborhood.
+   neighborhood by purchasing 1 MT7688 router dev board a month until I am out
+   of film canisters.
   2. Transparently connect to residential PC's using the same URL/Domain
    everywhere. Preferably human-readable and doing authentication at another
    layer.
