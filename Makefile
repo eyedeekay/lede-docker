@@ -55,7 +55,10 @@ split:
 	split -b 99M lede-docker.tar
 	split -b 99M lede-build.tar
 
-build: omega2 mtseeed wndr3800
+build:
+	make omega2
+	make mtseeed
+	make wndr3800
 	docker run -i --privileged --name lede-build -t lede-build
 	make copy-bin
 	make archive
