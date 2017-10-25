@@ -56,9 +56,9 @@ split:
 	split -b 99M lede-build.tar
 
 build:
-	docker build --force-rm -f Dockerfile.omega2 -t lede-build .
-	docker build --force-rm -f Dockerfile.mtseeed -t lede-build .
-	docker build --force-rm -f Dockerfile.wndr3800 -t lede-build .
+	docker build --force-rm -f Dockerfile.omega2 -t lede-build-omega2 .
+	docker build --force-rm -f Dockerfile.mtseeed -t lede-build-mtseeed .
+	docker build --force-rm -f Dockerfile.wndr3800 -t lede-build-wndr3800 .
 	docker run -i --privileged --name lede-build -t lede-build
 	make copy-bin
 	make archive
