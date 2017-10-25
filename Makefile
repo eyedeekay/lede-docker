@@ -55,13 +55,26 @@ split:
 	split -b 99M lede-docker.tar
 	split -b 99M lede-build.tar
 
-build:
-	docker build --force-rm -f Dockerfile.omega2 -t lede-build-omega2 .
-	docker build --force-rm -f Dockerfile.mtseeed -t lede-build-mtseeed .
-	docker build --force-rm -f Dockerfile.wndr3800 -t lede-build-wndr3800 .
+build: omega2 mtseeed wndr3800
 	docker run -i --privileged --name lede-build -t lede-build
 	make copy-bin
 	make archive
+
+omega2:
+	docker build --force-rm -f Dockerfile.omega2 -t lede-build-omega2 .
+	docker run --name lede-build-omega2 -t lede-build-omega2 bash
+	docker cp lede-build-omega2:/home/lede-build/source/bin ./bin-omega2
+
+mtseeed:
+	docker build --force-rm -f Dockerfile.mtseeed -t lede-build-mtseeed .
+	docker run --name lede-build-mtseeed -t lede-build-mtseeed bash
+	docker cp lede-build-mtseeed:/home/lede-build/source/bin ./bin-mtseeed
+
+wndr3800:
+	docker build --force-rm -f Dockerfile.wndr3800 -t lede-build-wndr3800 .
+	docker run --name lede-build-wndr3800 -t lede-build-wndr3800 bash
+	docker cp lede-build-wndr3800:/home/lede-build/source/bin ./bin-wndr3800
+
 
 old-build:
 	docker run -i --privileged --name lede-build -t lede-build
@@ -70,7 +83,7 @@ old-build:
 
 archive:
 	rm -rf $(HOME)/Builds/lede-$(shell date -d "yesterday" +%Y%m%d)*
-	cp -Rv bin "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)"
+	cp -Rv bin* "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)"
 
 copy-config:
 	docker cp lede-build:/home/lede-build/source/.config .config.in
