@@ -9,6 +9,6 @@ USER root
 RUN chown lede-build:lede-build /home/lede-build/source/.config
 USER lede-build
 
-RUN make defconfig
+RUN make -j3 V=s defconfig
 RUN make -j3 V=s
 CMD bash
