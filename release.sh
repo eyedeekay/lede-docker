@@ -22,12 +22,8 @@ release_images(){
                 --repo lede-docker \
                 --tag $(date +%Y%m%d%H) \
                 --name "meshledeconfig" \
-                --file "$file_upload/bin/targets/ramips"
-                mktorrent -a udp://tracker.openbittorrent.com:80 \
-                        -a udp://tracker.publicbt.com:80 \
-                        -a udp://tracker.opentrackr.org:1337 \
-                        -c "A personal LEDE config with Kadnode and CJDNS pre-installed" \
-                        -w
+                --file "$file_upload/bin/targets/ramips/mt7688/lede-ramips-mt7688-omega2p-squashfs-sysupgrade.bin"
+
 }
 
 release_repository(){
@@ -37,15 +33,28 @@ release_repository(){
 		--tag $(date +%Y%m%d%H) \
 		--name "meshledeconfig" \
 		--file "$file_repo-$(date +%Y%m%d%H%M).tar.gz"
-                mktorrent -a udp://tracker.openbittorrent.com:80 \
+}
+
+release_torrent_image(){
+        mktorrent -a udp://tracker.openbittorrent.com:80 \
+                        -a udp://tracker.publicbt.com:80 \
+                        -a udp://tracker.opentrackr.org:1337 \
+                        -c "A personal LEDE config with Kadnode and CJDNS pre-installed" \
+                        -w
+                        "$file_upload/bin/targets/ramips/mt7688/lede-ramips-mt7688-omega2p-squashfs-sysupgrade.bin"
+}
+
+release_torrent_repository(){
+        mktorrent -a udp://tracker.openbittorrent.com:80 \
                         -a udp://tracker.publicbt.com:80 \
                         -a udp://tracker.opentrackr.org:1337 \
                         -c "A personal LEDE config with Kadnode and CJDNS pre-installed" \
                         -w
 }
 
-
-prerelease
+#prerelease
 release_tarball
-release_images
-release_repository
+#release_images
+#release_repository
+
+
