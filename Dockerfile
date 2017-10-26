@@ -27,14 +27,8 @@ WORKDIR /home/lede-build/source
 RUN ./scripts/feeds update -a
 RUN ./scripts/feeds install -a
 
-#COPY files/ /home/lede-build/source/files
 COPY kadnode/ /home/lede-build/source/package/kadnode
-
-COPY .config.in /home/lede-build/source/.config
-
-RUN make V=s defconfig
 
 RUN chown --preserve-root -RL lede-build:lede-build /home/lede-build/source
 
 USER lede-build
-RUN make V=s defconfig

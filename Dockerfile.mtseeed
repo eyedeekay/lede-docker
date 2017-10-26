@@ -1,13 +1,12 @@
 FROM eyedeekay/lede-docker
-
 USER lede-build
-RUN make V=s defconfig
 
 COPY .config.in.mtseeed /home/lede-build/source/.config
+
 USER root
-
 RUN chown lede-build:lede-build /home/lede-build/source/.config
-USER lede-build
 
-RUN make -j3 V=s defconfig
-CMD make -j3 V=s
+USER lede-build
+RUN make defconfig
+
+CMD make
