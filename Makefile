@@ -67,6 +67,8 @@ omega2:
 	docker build --force-rm -f Dockerfile.omega2 -t lede-build-omega2 .
 	docker run --name lede-build-omega2 -t lede-build-omega2
 	docker cp lede-build-omega2:/home/lede-build/source/bin ./bin-omega2
+	mkdir -p "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)-omega2"
+	cp -Rv bin*/ "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)-omega2"
 	docker rm -f lede-build-omega2; \
 	docker rmi -f lede-build-omega2; \
 	docker system prune -f; true
@@ -75,6 +77,8 @@ mtseeed:
 	docker build --force-rm -f Dockerfile.mtseeed -t lede-build-mtseeed .
 	docker run --name lede-build-mtseeed -t lede-build-mtseeed
 	docker cp lede-build-mtseeed:/home/lede-build/source/bin ./bin-mtseeed
+	mkdir -p "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)-mtseeed"
+	cp -Rv bin*/ "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)-mtseeed"
 	docker rm -f lede-build-mtseeed; \
 	docker rmi -f lede-build-mtseeed; \
 	docker system prune -f; true
@@ -83,6 +87,8 @@ wndr3800:
 	docker build --force-rm -f Dockerfile.wndr3800 -t lede-build-wndr3800 .
 	docker run --name lede-build-wndr3800 -t lede-build-wndr3800
 	docker cp lede-build-wndr3800:/home/lede-build/source/bin ./bin-wndr3800
+	mkdir -p "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)-wndr3800"
+	cp -Rv bin*/ "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)-wndr3800"
 	docker rm -f lede-build-wndr3800; \
 	docker rmi -f lede-build-wndr3800; \
 	docker system prune -f; true
@@ -95,7 +101,7 @@ old-build:
 
 archive:
 	rm -rf $(HOME)/Builds/lede-$(shell date -d "yesterday" +%Y%m%d)*
-	cp -Rv bin* "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)"
+	cp -Rv bin/ "$(HOME)/Builds/lede-$(shell date +%Y%m%d%I)-omega2"
 
 copy-config:
 	docker cp lede-build:/home/lede-build/source/.config .config.in
