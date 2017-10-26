@@ -1,12 +1,11 @@
 #! /usr/bin/env sh
 
+export PATH="$HOME/.go/bin/:$PATH"
+
 file_upload="$1"
 
-#version_tag=$version_tag
 version_tag="17.01.04"
 release_tag="e_wrt"
-
-echo "$file_upload"
 
 delrelease(){
         github-release delete \
@@ -14,6 +13,7 @@ delrelease(){
 		--repo lede-docker \
 		--tag "$version_tag"
 }
+
 
 prerelease(){
         github-release release \
@@ -66,15 +66,21 @@ release_torrent_repository(){
 }
 
 release_torrents(){
-        for f in *.torrent; do
-                github-release upload \
+        github-release upload \
 		--user eyedeekay \
 		--repo lede-docker \
 		--tag "$version_tag" \
-		--name "$f" \
-		--file "$f"
-        done
+		--name "$(basename $(find $file_upload/targets -name *.bin))" \
+		--file "$(basename $(find $file_upload/targets -name *.bin)).torrent"
+        github-release upload \
+		--user eyedeekay \
+		--repo lede-docker \
+		--tag "$version_tag" \
+		--name "$file_upload-$version_tag.tar.gz" \
+		--file "$file_upload-$version_tag.tar.gz.torrent"
 }
+
+
 
 delrelease
 prerelease
@@ -84,7 +90,3 @@ release_torrent_repository "$file_upload"
 release_images "$file_upload"
 release_torrent_image "$file_upload"
 release_torrents
-#
-
-
-
