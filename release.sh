@@ -54,7 +54,7 @@ release_torrent_repository(){
 }
 
 #prerelease
-release_tarball
+release_tarball "$file_upload"
 #release_images
 #release_repository
 
