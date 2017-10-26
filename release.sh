@@ -2,6 +2,8 @@
 
 export file_upload="$1"
 
+echo "$file_upload"
+
 prerelease(){
         github-release release \
 		--user eyedeekay \
