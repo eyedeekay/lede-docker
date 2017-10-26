@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-export file_upload="$1"
+file_upload="$1"
 
 echo "$file_upload"
 
