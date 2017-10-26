@@ -1,7 +1,7 @@
 FROM eyedeekay/lede-docker
 USER lede-build
 
-COPY .config.in.wnr3800 /home/lede-build/source/.config
+COPY .config.in.wndr3800 /home/lede-build/source/.config
 
 USER root
 RUN chown lede-build:lede-build /home/lede-build/source/.config
