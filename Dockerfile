@@ -20,7 +20,6 @@ RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         patch perl-modules rsync ruby sdcc unzip wget gettext xsltproc \
         libboost1.55-dev libxml-parser-perl libusb-dev bin86 bcc sharutils \
         openjdk-7-jdk curl git
-#RUN git clone https://github.com/lede-project/source /home/lede-build/source
 
 WORKDIR /home/lede-build/source
 

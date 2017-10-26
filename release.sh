@@ -1,36 +1,51 @@
 #! /usr/bin/env sh
-github-release release \
+
+export file_upload="$1"
+
+prerelease(){
+        github-release release \
 		--user eyedeekay \
 		--repo lede-docker \
-		--tag $(date +%Y%m%d%H%M) \
+		--tag $(date +%Y%m%d%H) \
 		--name "meshledeconfig" \
 		--description "A personal LEDE config with Kadnode and CJDNS pre-installed" \
 		--pre-release
+}
 
-for file_upload in $(find . -name *.img); do
+release_tarball(){
+        tar -czf "$file_repo-$(date +%Y%m%d%H%M).tar.gz" "$file_repo"
+}
+
+release_images(){
         github-release upload \
-		--user eyedeekay \
-		--repo lede-docker \
-		--tag v0.1.0 \
-		--name "meshledeconfig" \
-		--file "$file_upload"
+                --user eyedeekay \
+                --repo lede-docker \
+                --tag $(date +%Y%m%d%H) \
+                --name "meshledeconfig" \
+                --file "$file_upload/bin/targets/ramips"
                 mktorrent -a udp://tracker.openbittorrent.com:80 \
                         -a udp://tracker.publicbt.com:80 \
                         -a udp://tracker.opentrackr.org:1337 \
                         -c "A personal LEDE config with Kadnode and CJDNS pre-installed" \
                         -w
-done
+}
 
-for file_upload in $(find . -name *.bin); do
+release_repository(){
         github-release upload \
 		--user eyedeekay \
 		--repo lede-docker \
-		--tag v0.1.0 \
+		--tag $(date +%Y%m%d%H) \
 		--name "meshledeconfig" \
-		--file "$file_upload"
+		--file "$file_repo-$(date +%Y%m%d%H%M).tar.gz"
                 mktorrent -a udp://tracker.openbittorrent.com:80 \
                         -a udp://tracker.publicbt.com:80 \
                         -a udp://tracker.opentrackr.org:1337 \
                         -c "A personal LEDE config with Kadnode and CJDNS pre-installed" \
                         -w
-done
+}
+
+
+prerelease
+release_tarball
+release_images
+release_repository
