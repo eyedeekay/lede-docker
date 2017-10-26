@@ -114,9 +114,12 @@ untar:
 	rm -rf files && mkdir files
 	cd files && tar -xvf ../*.tar
 
-clobber:
+clobber: clean
 	docker rm -f lede-docker lede-build lede-config lede-test lede-kernel-config lede-build-wndr3800 lede-build-omega2 lede-build-mtseeed; \
 	docker rmi -f lede-docker lede-build lede-config lede-test lede-kernel-config lede-build-wndr3800 lede-build-omega2 lede-build-mtseeed
+
+clean:
+	rm -rf bin*
 
 release:
 	@echo "don't use this yet."
