@@ -15,7 +15,6 @@ prerelease(){
 }
 
 release_tarball(){
-        echo "tar -czf $file_upload-$(date +%Y%m%d%H%M).tar.gz $file_upload/packages/"
         tar -czf "$file_upload-$(date +%Y%m%d%H%M).tar.gz" "$file_upload/packages/"
 }
 
@@ -57,8 +56,9 @@ release_torrent_repository(){
 
 prerelease
 release_tarball "$file_upload"
+release_repository "$file_upload"
 release_images "$file_upload"
 #release_torrent_image "$file_upload"
-#release_repository "$file_upload"
+#
 
 
