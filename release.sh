@@ -55,9 +55,10 @@ release_torrent_repository(){
                         -w
 }
 
-#prerelease
+prerelease
 release_tarball "$file_upload"
-#release_images
-#release_repository
+release_images "$file_upload"
+#release_torrent_image "$file_upload"
+#release_repository "$file_upload"
 
 
