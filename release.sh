@@ -15,8 +15,8 @@ prerelease(){
 }
 
 release_tarball(){
-        echo "tar -czf $file_repo-$(date +%Y%m%d%H%M).tar.gz $file_repo/packages/"
-        tar -czf "$file_repo-$(date +%Y%m%d%H%M).tar.gz" "$file_repo/packages/"
+        echo "tar -czf $file_upload-$(date +%Y%m%d%H%M).tar.gz $file_upload/packages/"
+        tar -czf "$file_upload-$(date +%Y%m%d%H%M).tar.gz" "$file_upload/packages/"
 }
 
 release_images(){
@@ -35,7 +35,7 @@ release_repository(){
 		--repo lede-docker \
 		--tag $(date +%Y%m%d%H) \
 		--name "meshledeconfig" \
-		--file "$file_repo-$(date +%Y%m%d%H%M).tar.gz"
+		--file "$file_upload-$(date +%Y%m%d%H%M).tar.gz"
 }
 
 release_torrent_image(){
