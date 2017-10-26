@@ -71,7 +71,7 @@ omega2:
 	docker rm -f lede-build-omega2; \
 	docker rmi -f lede-build-omega2; \
 	docker system prune -f; true
-	#./release.sh ./bin-omega2
+	./release.sh bin-omega2
 
 mtseeed:
 	docker build --force-rm -f Dockerfile.mtseeed -t lede-build-mtseeed .
@@ -82,7 +82,7 @@ mtseeed:
 	docker rm -f lede-build-mtseeed; \
 	docker rmi -f lede-build-mtseeed; \
 	docker system prune -f; true
-	#./release.sh ./bin-mtseeed
+	./release.sh bin-mtseeed
 
 wndr3800:
 	docker build --force-rm -f Dockerfile.wndr3800 -t lede-build-wndr3800 .
@@ -93,7 +93,7 @@ wndr3800:
 	docker rm -f lede-build-wndr3800; \
 	docker rmi -f lede-build-wndr3800; \
 	docker system prune -f; true
-	#./release.sh ./bin-wndr3800
+	./release.sh bin-wndr3800
 
 
 old-build:
@@ -121,4 +121,9 @@ clobber: clean
 	docker rmi -f lede-docker lede-build lede-config lede-test lede-kernel-config lede-build-wndr3800 lede-build-omega2 lede-build-mtseeed
 
 clean:
-	rm -rf bin*
+	rm -rf bin* *.tar.gz
+
+release:
+	./release.sh ./bin-omega2
+	./release.sh ./bin-mtseeed
+	./release.sh ./bin-wndr3800
