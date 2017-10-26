@@ -13,7 +13,8 @@ prerelease(){
 }
 
 release_tarball(){
-        tar -czf "$file_repo-$(date +%Y%m%d%H%M).tar.gz" "$file_repo"
+        echo "tar -czf $file_repo-$(date +%Y%m%d%H%M).tar.gz $file_repo/packages/"
+        tar -czf "$file_repo-$(date +%Y%m%d%H%M).tar.gz" "$file_repo/packages/"
 }
 
 release_images(){
