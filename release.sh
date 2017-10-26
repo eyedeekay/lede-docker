@@ -2,34 +2,38 @@
 
 file_upload="$1"
 
+#version_tag=$version_tag
+version_tag="17.01.04"
+release_tag="e_wrt"
+
 echo "$file_upload"
 
 delrelease(){
         github-release delete \
 		--user eyedeekay \
 		--repo lede-docker \
-		--tag $(date +%Y%m%d%H)
+		--tag "$version_tag"
 }
 
 prerelease(){
         github-release release \
 		--user eyedeekay \
 		--repo lede-docker \
-		--tag $(date +%Y%m%d%H) \
-		--name "meshledeconfig" \
+		--tag "$version_tag" \
+		--name "$release_tag" \
 		--description "A personal LEDE config with Kadnode and CJDNS pre-installed" \
 		--pre-release
 }
 
 release_tarball(){
-        tar -czf "$file_upload-$(date +%Y%m%d%H).tar.gz" "$file_upload/packages/"
+        tar -czf "$file_upload-$version_tag.tar.gz" "$file_upload/packages/"
 }
 
 release_images(){
         github-release upload \
                 --user eyedeekay \
                 --repo lede-docker \
-                --tag $(date +%Y%m%d%H) \
+                --tag "$version_tag" \
                 --name "$(basename $(find $file_upload/targets -name *.bin))" \
                 --file "$(find $file_upload/targets -name *.bin)"
 }
@@ -38,9 +42,9 @@ release_repository(){
         github-release upload \
 		--user eyedeekay \
 		--repo lede-docker \
-		--tag $(date +%Y%m%d%H) \
-		--name "$file_upload-$(date +%Y%m%d%H).tar.gz" \
-		--file "$file_upload-$(date +%Y%m%d%H).tar.gz"
+		--tag "$version_tag" \
+		--name "$file_upload-$version_tag.tar.gz" \
+		--file "$file_upload-$version_tag.tar.gz"
 }
 
 release_torrent_image(){
@@ -48,7 +52,7 @@ release_torrent_image(){
                         -a udp://tracker.publicbt.com:80 \
                         -a udp://tracker.opentrackr.org:1337 \
                         -c "A personal LEDE config with Kadnode and CJDNS pre-installed" \
-                        -w "https://github.com/eyedeekay/lede-docker/releases/download/$(date +%Y%m%d%H)/$(basename $(find $file_upload/targets -name *.bin))" \
+                        -w "https://github.com/eyedeekay/lede-docker/releases/download/$version_tag/$(basename $(find $file_upload/targets -name *.bin))" \
                         "$(find $file_upload/targets -name *.bin)"
 }
 
@@ -57,8 +61,8 @@ release_torrent_repository(){
                         -a udp://tracker.publicbt.com:80 \
                         -a udp://tracker.opentrackr.org:1337 \
                         -c "A personal LEDE config with Kadnode and CJDNS pre-installed" \
-                        -w "https://github.com/eyedeekay/lede-docker/releases/download/$(date +%Y%m%d%H)/$file_upload-$(date +%Y%m%d%H).tar.gz" \
-                        "$file_upload-$(date +%Y%m%d%H).tar.gz"
+                        -w "https://github.com/eyedeekay/lede-docker/releases/download/$version_tag/$file_upload-$version_tag.tar.gz" \
+                        "$file_upload-$version_tag.tar.gz"
 }
 
 release_torrents(){
@@ -66,7 +70,7 @@ release_torrents(){
                 github-release upload \
 		--user eyedeekay \
 		--repo lede-docker \
-		--tag $(date +%Y%m%d%H) \
+		--tag "$version_tag" \
 		--name "$f" \
 		--file "$f"
         done

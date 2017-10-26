@@ -7,6 +7,7 @@ USER root
 RUN chown lede-build:lede-build /home/lede-build/source/.config
 
 USER lede-build
+RUN git clone https://github.com/eyedeekay/omega2-files files
 RUN make defconfig
 
 CMD make V=s
