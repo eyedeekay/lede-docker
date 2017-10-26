@@ -9,4 +9,4 @@ RUN chown lede-build:lede-build /home/lede-build/source/.config
 USER lede-build
 RUN make defconfig
 
-CMD make
+CMD make V=s
