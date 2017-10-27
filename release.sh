@@ -34,8 +34,8 @@ release_images(){
                 --user eyedeekay \
                 --repo lede-docker \
                 --tag "$version_tag" \
-                --name "$(basename $(find $file_upload/targets -name *.bin))" \
-                --file "$(find $file_upload/targets -name *.bin)"
+                --name "$(basename $(find $file_upload/targets -name *sysupgrade.bin))" \
+                --file "$(find $file_upload/targets -name *.sysupgrade.bin)"
 }
 
 release_repository(){
@@ -82,7 +82,6 @@ release_torrents(){
 
 
 
-delrelease
 prerelease
 release_tarball "$file_upload"
 release_repository "$file_upload"
