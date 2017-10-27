@@ -70,8 +70,8 @@ release_torrents(){
 		--user eyedeekay \
 		--repo lede-docker \
 		--tag "$version_tag" \
-		--name "$(basename $(find $file_upload/targets -name *.bin))" \
-		--file "$(basename $(find $file_upload/targets -name *.bin)).torrent"
+		--name "$(basename $(find $file_upload/targets -name *.sysupgrade.bin))" \
+		--file "$(basename $(find $file_upload/targets -name *.sysupgrade.bin)).torrent"
         github-release upload \
 		--user eyedeekay \
 		--repo lede-docker \
