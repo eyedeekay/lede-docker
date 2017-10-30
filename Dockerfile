@@ -9,9 +9,9 @@ RUN groupadd -r -g 64040 grsec-tpe;
 RUN adduser --home /home/lede-build/ --shell /bin/bash --disabled-password lede-build
 RUN usermod -aG grsec-tpe lede-build; true
 
-RUN wget -O /home/lede-build/v17.01.3.tar.gz https://github.com/lede-project/source/archive/v17.01.3.tar.gz
-RUN cd /home/lede-build && tar -xvzf v17.01.3.tar.gz
-RUN mv /home/lede-build/source-17.01.3 /home/lede-build/source
+RUN wget -O /home/lede-build/v17.01.4.tar.gz https://github.com/lede-project/source/archive/v17.01.4.tar.gz
+RUN cd /home/lede-build && tar -xvzf v17.01.4.tar.gz
+RUN mv /home/lede-build/source-17.01.4 /home/lede-build/source
 
 RUN apt-get install -yq build-essential perl-base devscripts wget libssl-dev \
         libncurses5-dev unzip gawk zlib1g-dev subversion mercurial bc binutils \
