@@ -70,12 +70,14 @@ release_torrent_repository(){
 }
 
 release_torrents(){
-        github-release upload \
-		--user eyedeekay \
-		--repo lede-docker \
-		--tag "$version_tag" \
-		--name "$(basename $(find $file_upload/targets -name *.sysupgrade.bin)).torrent" \
-		--file "$(basename $(find $file_upload/targets -name *.sysupgrade.bin)).torrent"
+        for f in $(find "$file_upload"/targets -name *.sysupgrade.bin); do
+                github-release upload \
+                        --user eyedeekay \
+                        --repo lede-docker \
+                        --tag "$version_tag" \
+                        --name "$(basename $f).torrent" \
+                        --file "$(basename $f).torrent"
+        done
         github-release upload \
 		--user eyedeekay \
 		--repo lede-docker \
