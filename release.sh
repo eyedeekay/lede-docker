@@ -30,12 +30,14 @@ release_tarball(){
 }
 
 release_images(){
-        github-release upload \
-                --user eyedeekay \
-                --repo lede-docker \
-                --tag "$version_tag" \
-                --name "$(basename $(find $file_upload/targets -name *sysupgrade.bin))" \
-                --file "$(find $file_upload/targets -name *.sysupgrade.bin)"
+        for f in $(find "$file_upload"/targets -name *.sysupgrade.bin); do
+                github-release upload \
+                        --user eyedeekay \
+                        --repo lede-docker \
+                        --tag "$version_tag" \
+                        --name "$(basename $f)" \
+                        --file "$f"
+        done
 }
 
 release_repository(){
@@ -48,12 +50,14 @@ release_repository(){
 }
 
 release_torrent_image(){
-        mktorrent -a udp://tracker.openbittorrent.com:80 \
-                        -a udp://tracker.publicbt.com:80 \
-                        -a udp://tracker.opentrackr.org:1337 \
-                        -c "A personal LEDE config with Kadnode and CJDNS pre-installed" \
-                        -w "https://github.com/eyedeekay/lede-docker/releases/download/$version_tag/$(basename $(find $file_upload/targets -name *.bin))" \
-                        "$(find $file_upload/targets -name *.bin)"
+        for f in $(find "$file_upload"/targets -name *.sysupgrade.bin); do
+                mktorrent -a udp://tracker.openbittorrent.com:80 \
+                                -a udp://tracker.publicbt.com:80 \
+                                -a udp://tracker.opentrackr.org:1337 \
+                                -c "A personal LEDE config with Kadnode and CJDNS pre-installed" \
+                                -w "https://github.com/eyedeekay/lede-docker/releases/download/$version_tag/$(basename $f)" \
+                                "$f"
+        done
 }
 
 release_torrent_repository(){
@@ -70,13 +74,13 @@ release_torrents(){
 		--user eyedeekay \
 		--repo lede-docker \
 		--tag "$version_tag" \
-		--name "$(basename $(find $file_upload/targets -name *.sysupgrade.bin))" \
+		--name "$(basename $(find $file_upload/targets -name *.sysupgrade.bin)).torrent" \
 		--file "$(basename $(find $file_upload/targets -name *.sysupgrade.bin)).torrent"
         github-release upload \
 		--user eyedeekay \
 		--repo lede-docker \
 		--tag "$version_tag" \
-		--name "$file_upload-$version_tag.tar.gz" \
+		--name "$file_upload-$version_tag.tar.gz.torrent" \
 		--file "$file_upload-$version_tag.tar.gz.torrent"
 }
 
