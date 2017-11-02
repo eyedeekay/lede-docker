@@ -87,7 +87,7 @@ release_torrents(){
 }
 
 
-
+delrelease
 prerelease
 release_tarball "$file_upload"
 release_repository "$file_upload"
