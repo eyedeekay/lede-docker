@@ -89,7 +89,7 @@ release_torrents(){
 }
 
 
-if [ "$1" == "delrelease" ]; then
+if [ "$1" = "delrelease" ]; then
         delrelease
 fi
 
