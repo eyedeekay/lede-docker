@@ -21,7 +21,6 @@ prerelease(){
 		--tag "$version_tag" \
 		--name "$release_tag" \
 		--description "A personal LEDE config with Kadnode and CJDNS pre-installed" \
-		--pre-release
 }
 
 release_tarball(){
