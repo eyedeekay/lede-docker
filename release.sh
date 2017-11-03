@@ -20,7 +20,7 @@ prerelease(){
 		--repo lede-docker \
 		--tag "$version_tag" \
 		--name "$release_tag" \
-		--description "A personal LEDE config with Kadnode and CJDNS pre-installed" \
+		--description "A personal LEDE config with Kadnode and CJDNS pre-installed"
 }
 
 release_tarball(){
