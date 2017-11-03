@@ -14,7 +14,6 @@ delrelease(){
 		--tag "$version_tag"
 }
 
-
 prerelease(){
         github-release release \
 		--user eyedeekay \
@@ -90,7 +89,10 @@ release_torrents(){
 }
 
 
-delrelease
+if [ "$1" == "delrelease" ]; then
+        delrelease
+fi
+
 prerelease
 release_tarball "$file_upload"
 release_repository "$file_upload"
