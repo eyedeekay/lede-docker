@@ -71,6 +71,7 @@ omega2:
 	docker rm -f lede-build-omega2; \
 	docker rmi -f lede-build-omega2; \
 	docker system prune -f; true
+	./release.sh delrelease
 	./release.sh bin-omega2
 
 mtseeed:
