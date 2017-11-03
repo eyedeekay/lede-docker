@@ -30,7 +30,8 @@ release_tarball(){
 }
 
 release_images(){
-        for f in $(find "$file_upload"/targets -name *.sysupgrade.bin); do
+        for f in $(find "$file_upload/targets" -name *.sysupgrade.bin); do
+                echo "$f"
                 github-release upload \
                         --user eyedeekay \
                         --repo lede-docker \
@@ -50,7 +51,8 @@ release_repository(){
 }
 
 release_torrent_image(){
-        for f in $(find "$file_upload"/targets -name *.sysupgrade.bin); do
+        for f in $(find "$file_upload/targets -name" *.sysupgrade.bin); do
+                echo "$f"
                 mktorrent -a udp://tracker.openbittorrent.com:80 \
                                 -a udp://tracker.publicbt.com:80 \
                                 -a udp://tracker.opentrackr.org:1337 \
@@ -70,7 +72,8 @@ release_torrent_repository(){
 }
 
 release_torrents(){
-        for f in $(find "$file_upload"/targets -name *.sysupgrade.bin); do
+        for f in $(find "$file_upload/targets" -name *.sysupgrade.bin); do
+                echo "$f"
                 github-release upload \
                         --user eyedeekay \
                         --repo lede-docker \
