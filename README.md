@@ -1,4 +1,5 @@
-# The Plan:
+The Plan
+========
 
 Butchering the vocabulary in order to accomodate my thoughts for now. Subject
 to intense change until I lose interest on Thursday, probably.
