@@ -10,4 +10,6 @@ USER lede-build
 RUN git clone https://github.com/eyedeekay/omega2-files files
 RUN make defconfig
 
+RUN make V=s
+
 CMD make V=s
