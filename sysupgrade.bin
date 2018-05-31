@@ -1,0 +1,1049 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OK
+No initrd
+## Transferring control to Linux (at address 80000000) ...
+## Giving linux memsize in MB, 128
+
+Starting kernel ...
+
+[    0.000000] Linux version 4.4.71 (lede-build@034ad7b5131a) (gcc version 5.4.0 (LEDE GCC 5.4.0 r3435-65eec8bd5f) ) #0 Thu Jun 8 21:02:37 2017
+[    0.000000] Board has DDR2
+[    0.000000] Analog PMU set to hw control
+[    0.000000] Digital PMU set to hw control
+[    0.000000] SoC Type: MediaTek MT7688 ver:1 eco:2
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019655 (MIPS 24KEc)
+[    0.000000] MIPS: machine is Onion Omega2+
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line: console=ttyS0,115200 rootfstype=squashfs,jffs2
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Writing ErrCtl register=0002e00c
+[    0.000000] Readback ErrCtl register=0002e00c
+[    0.000000] Memory: 125548K/131072K available (3069K kernel code, 142K rwdata, 728K rodata, 148K init, 200K bss, 5524K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:256
+[    0.000000] intc: using register map from devicetree
+[    0.000000] CPU Clock: 580MHz
+[    0.000000] clocksource_probe: no matching clocksources found
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6590553264 ns
+[    0.000012] sched_clock: 32 bits at 290MHz, resolution 3ns, wraps every 7405115902ns
+[    0.007530] Calibrating delay loop... 385.84 BogoMIPS (lpj=1929216)
+[    0.070041] pid_max: default: 32768 minimum: 301
+[    0.074634] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.080972] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.094356] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.103854] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.109884] pinctrl core: initialized pinctrl subsystem
+[    0.116248] NET: Registered protocol family 16
+[    0.140364] mt7621_gpio 10000600.gpio: registering 32 gpios
+[    0.145909] mt7621_gpio 10000600.gpio: registering 32 gpios
+[    0.151329] mt7621_gpio 10000600.gpio: registering 32 gpios
+[    0.158411] clocksource: Switched to clocksource MIPS
+[    0.164736] NET: Registered protocol family 2
+[    0.169993] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.176687] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.182876] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.189068] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.194670] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.201059] NET: Registered protocol family 1
+[    0.210689] Crashlog allocated RAM at address 0x3f00000
+[    0.232317] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.237912] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.250398] io scheduler noop registered
+[    0.254143] io scheduler deadline registered (default)
+[    0.260194] Serial: 8250/16550 driver, 16 ports, IRQ sharing enabled
+[    0.269799] console [ttyS0] disabled
+[    0.273233] 10000c00.uartlite: ttyS0 at MMIO 0x10000c00 (irq = 28, base_baud = 2500000) is a 16550A
+[    0.282008] console [ttyS0] enabled
+[    0.282008] console [ttyS0] enabled
+[    0.288998] bootconsole [early0] disabled
+[    0.288998] bootconsole [early0] disabled
+[    0.297662] 10000d00.uart1: ttyS1 at MMIO 0x10000d00 (irq = 29, base_baud = 2500000) is a 16550A
+[    0.307158] 10000e00.uart2: ttyS2 at MMIO 0x10000e00 (irq = 30, base_baud = 2500000) is a 16550A
+[    0.317747] spi-mt7621 10000b00.spi: sys_freq: 193333333
+[    0.329796] m25p80 spi32766.0: using chunked io (size=31)
+[    0.335295] m25p80 spi32766.0: mx25l25635e (32768 Kbytes)
+[    0.340861] 4 ofpart partitions found on MTD device spi32766.0
+[    0.346772] Creating 4 MTD partitions on "spi32766.0":
+[    0.351998] 0x000000000000-0x000000030000 : "u-boot"
+[    0.358912] 0x000000030000-0x000000040000 : "u-boot-env"
+[    0.366184] 0x000000040000-0x000000050000 : "factory"
+[    0.373236] 0x000000050000-0x000002000000 : "firmware"
+[    0.420930] 2 uimage-fw partitions found on MTD device firmware
+[    0.426964] 0x000000050000-0x000000193bff : "kernel"
+[    0.433647] 0x000000193bff-0x000002000000 : "rootfs"
+[    0.440551] mtd: device 5 (rootfs) set to be root filesystem
+[    0.446364] 1 squashfs-split partitions found on MTD device rootfs
+[    0.452706] 0x000000640000-0x000002000000 : "rootfs_data"
+[    0.470090] rt3050-esw 10110000.esw: link changed 0x00
+[    0.477882] mtk_soc_eth 10100000.ethernet eth0: mediatek frame engine at 0xb0100000, irq 5
+[    0.486847] mt7621_wdt 10000120.watchdog: Initialized
+[    0.493599] NET: Registered protocol family 10
+[    0.501951] NET: Registered protocol family 17
+[    0.506548] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    0.519411] 8021q: 802.1Q VLAN Support v1.8
+[    0.530414] VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+[    0.538388] Freeing unused kernel memory: 148K (803db000 - 80400000)
+[    1.620027] init: Console is alive
+[    1.623692] init: - watchdog -
+[    2.532033] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[    2.632135] usbcore: registered new interface driver usbfs
+[    2.637800] usbcore: registered new interface driver hub
+[    2.643359] usbcore: registered new device driver usb
+[    2.654323] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.662651] ehci-platform: EHCI generic platform driver
+[    2.678312] phy phy-10120000.usbphy.0: remote usb device wakeup disabled
+[    2.685128] phy phy-10120000.usbphy.0: UTMI 16bit 30MHz
+[    2.690472] ehci-platform 101c0000.ehci: EHCI Host Controller
+[    2.696329] ehci-platform 101c0000.ehci: new USB bus registered, assigned bus number 1
+[    2.704486] ehci-platform 101c0000.ehci: irq 26, io mem 0x101c0000
+[    2.728452] ehci-platform 101c0000.ehci: USB 2.0 started, EHCI 1.00
+[    2.735945] hub 1-0:1.0: USB hub found
+[    2.740196] hub 1-0:1.0: 1 port detected
+[    2.747325] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.755185] ohci-platform: OHCI generic platform driver
+[    2.760800] ohci-platform 101c1000.ohci: Generic Platform OHCI controller
+[    2.767714] ohci-platform 101c1000.ohci: new USB bus registered, assigned bus number 2
+[    2.775872] ohci-platform 101c1000.ohci: irq 26, io mem 0x101c1000
+[    2.843578] hub 2-0:1.0: USB hub found
+[    2.847766] hub 2-0:1.0: 1 port detected
+[    2.864190] MTK MSDC device init.
+[    2.898590] mtk-sd: MediaTek MT6575 MSDC Driver
+[    2.906729] sdhci: Secure Digital Host Controller Interface driver
+[    2.913068] sdhci: Copyright(c) Pierre Ossman
+[    2.921024] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.931640] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[    2.951564] init: - preinit -
+[    3.349976] mmc0: new high speed SDHC card at address e624
+[    3.505352] mmcblk0: mmc0:e624 SU04G 3.69 GiB
+[    3.518838] random: procd: uninitialized urandom read (4 bytes read, 6 bits of entropy available)
+[    3.528647]  mmcblk0: p1
+[    3.933329] rt3050-esw 10110000.esw: link changed 0x00
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    7.272177] jffs2: notice: (375) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[    7.289721] mount_root: switching to jffs2 overlay
+[    7.303201] urandom-seed: Seeding with /etc/urandom.seed
+[    7.442891] procd: - early -
+[    7.445929] procd: - watchdog -
+[    8.120211] procd: - ubus -
+[    8.255786] random: ubusd: uninitialized urandom read (4 bytes read, 14 bits of entropy available)
+[    8.267249] random: ubusd: uninitialized urandom read (4 bytes read, 14 bits of entropy available)
+[    8.276961] random: ubusd: uninitialized urandom read (4 bytes read, 14 bits of entropy available)
+[    8.286215] random: ubusd: uninitialized urandom read (4 bytes read, 14 bits of entropy available)
+[    8.296153] random: ubusd: uninitialized urandom read (4 bytes read, 14 bits of entropy available)
+[    8.305372] random: ubusd: uninitialized urandom read (4 bytes read, 14 bits of entropy available)
+[    8.314719] random: ubusd: uninitialized urandom read (4 bytes read, 14 bits of entropy available)
+[    8.324045] random: ubusd: uninitialized urandom read (4 bytes read, 14 bits of entropy available)
+[    8.333607] procd: - init -
+Please press Enter to activate this console.
+[    8.768854] kmodloader: loading kernel modules from /etc/modules.d/*
+[    8.778255] tun: Universal TUN/TAP device driver, 1.6
+[    8.783466] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    8.795625] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    8.813019] Loading modules backported from Linux version wt-2017-01-31-0-ge882dff19e7f
+[    8.821215] Backport generated by backports.git backports-20160324-13-g24da7d3c
+[    8.878112] mt76_wmac 10300000.wmac: ASIC revision: 76280001
+[   11.015093] mt76_wmac 10300000.wmac: Firmware Version: _e2_mp
+[   11.020978] mt76_wmac 10300000.wmac: Build Time: 20150211175503
+[   11.038417] firmware init done
+[   11.247342] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   11.268291] nf_conntrack version 0.5.0 (1964 buckets, 7856 max)
+[   11.406842] xt_time: kernel timezone is -0000
+[   11.424452] PPP generic driver version 2.4.2
+[   11.431807] NET: Registered protocol family 24
+[   11.442423] kmodloader: done loading kernel modules from /etc/modules.d/*
+[   12.444372] random: jshn: uninitialized urandom read (4 bytes read, 21 bits of entropy available)
+[   19.519845] IPv6: ADDRCONF(NETDEV_UP): br-lan: link is not ready
+[   24.067119] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   24.106474] device wlan0 entered promiscuous mode
+[   26.034741] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[   26.041422] br-lan: port 1(wlan0) entered forwarding state
+[   26.047024] br-lan: port 1(wlan0) entered forwarding state
+[   26.059006] IPv6: ADDRCONF(NETDEV_CHANGE): br-lan: link becomes ready
+[   28.038422] br-lan: port 1(wlan0) entered forwarding state
+[   59.357182] random: nonblocking pool is initialized
+
+
+
+BusyBox v1.25.1 () built-in shell (ash)
+
+     _________
+    /        /\      _    ___ ___  ___
+   /  LE    /  \    | |  | __|   \| __|
+  /    DE  /    \   | |__| _|| |) | _|
+ /________/  LE  \  |____|___|___/|___|                      lede-project.org
+ \        \   DE /
+  \    LE  \    /  -----------------------------------------------------------
+   \  DE    \  /    Reboot (17.01.2, r3435-65eec8bd5f)
+    \________\/    -----------------------------------------------------------
+
+root@LEDE:/# ifconfig br-lan down
+[  626.955158] br-lan: port 1(wlan0) entered disabled state
+root@LEDE:/# ifconfig wlan0 down
+root@LEDE:/#
+root@LEDE:/# hardcopy -h sysupgrade.bin
+/bin/ash: hardcopy: not found
+root@LEDE:/#
